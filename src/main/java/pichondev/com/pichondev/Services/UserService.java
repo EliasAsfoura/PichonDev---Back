@@ -1,5 +1,6 @@
 package pichondev.com.pichondev.Services;
 
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pichondev.com.pichondev.Models.UserModel;
@@ -22,13 +23,12 @@ public class UserService {
     }
 
 
-
     public Optional<UserModel> obtenerPorId(Long id) {
         return userRepository.findById(id);
     }
 
-    public ArrayList<UserModel> obtenerPorPrioridad(Integer priority) {
-        return userRepository.findByPriority(priority);
+    public ArrayList<UserModel> obtenerPorStatus(String status) {
+        return userRepository.findByStatus(status);
     }
 
     public boolean eliminarUsuario(Long id) {

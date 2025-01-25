@@ -12,15 +12,15 @@ public class UserModel {
     private Long id;
 
     private String name;
-    private String email;
-    private Integer priority;
+    private String password;
+    private String status;
 
-    public void setPriority(Integer priority) {
-        this.priority = priority;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public Integer getPriority() {
-        return priority;
+    public String getStatus() {
+        return status;
     }
 
     public Long getId() {
@@ -35,15 +35,15 @@ public class UserModel {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String name) {this.name = name;}
+
+    public String getPassword() {
+        return password;
     }
 
-    public String getEmail() {
-        return email;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+
 }
